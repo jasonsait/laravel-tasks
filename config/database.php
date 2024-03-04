@@ -130,20 +130,20 @@ return [
 
         'default' => [
             'url' => env('REDIS_URL'),
-            'host' => env('REDIS_HOST', '127.0.0.1'),
-            'username' => env('REDIS_USERNAME'),
-            'password' => env('REDIS_PASSWORD'),
-            'port' => env('REDIS_PORT', '6379'),
+            'host' => env('AZURE_REDIS_HOST', '127.0.0.1'),
+            'username' => env('AZURE_REDIS_USERNAME'),
+            'password' => env('AZURE_REDIS_PASSWORD'),
+            'port' => env('AZURE_REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', '0'),
         ],
 
         'cache' => [
             'url' => env('REDIS_URL'),
             'scheme' => 'tls',
-            'host' => env('AZURE_REDIS_HOST', '127.0.0.1'),
+            'host' => env('REDIS_HOST', '127.0.0.1'),
             'username' => env('REDIS_USERNAME'),
-            'password' => env('AZURE_REDIS_PASSWORD'),
-            'port' => env('AZURE_REDIS_PORT', '6379'),
+            'password' => env('REDIS_PASSWORD'),
+            'port' => env('REDIS_PORT', '6379'),
             'database' => env('AZURE_REDIS_DATABASE', '1'),
             
         ],
